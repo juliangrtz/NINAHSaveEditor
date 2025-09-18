@@ -20,7 +20,7 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restore NuGet packages
-      run: nuget restore NINAHSaveEditor.sln
+      run: nuget restore NINAHSaveEditor/NINAHSaveEditor.sln
 
     - name: Build solution
-      run: msbuild NINAHSaveEditor.sln /p:Configuration=Release
+      run: msbuild NINAHSaveEditor/NINAHSaveEditor.sln /p:Configuration=Release

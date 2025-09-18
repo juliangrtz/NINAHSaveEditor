@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NINAHSaveEditor.Crypto;
 
 namespace NINAHSaveEditor {
     public partial class Editor : Form {
