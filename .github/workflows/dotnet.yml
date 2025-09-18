@@ -1,4 +1,4 @@
-name: .NET
+name: .NET Framework 4.8
 
 on:
   push:
@@ -9,16 +9,18 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    
+
     steps:
     - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 4.8
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restore NuGet packages
+      run: nuget restore NINAHSaveEditor.sln
+
+    - name: Build solution
+      run: msbuild NINAHSaveEditor.sln /p:Configuration=Release
