@@ -2,10 +2,15 @@
 
 <img width="872" height="354" alt="image" src="https://github.com/user-attachments/assets/73490c4c-e2a9-4b42-9631-fcadf2ac7df7" />
 
-A save game editor for **[No, I'm not a Human](https://store.steampowered.com/app/3180070/No_Im_not_a_Human/)**.  
+A Windows save game editor for **[No, I'm not a Human](https://store.steampowered.com/app/3180070/No_Im_not_a_Human/)**.  
 This tool allows you to **decrypt, inspect, edit, and re-encrypt** `.sav` files used by the game.  
 It is intended for educational and modding purposes — use at your own risk.
 
+## Requirements
+- Steam
+- No, I'm not a Human
+- .NET Framework 4.8 (preinstalled on Windows 11)
+  
 ## Features
 
 - Fully compatible with the game’s save system.
@@ -15,7 +20,7 @@ It is intended for educational and modding purposes — use at your own risk.
 
 ## Installation
 
-Download the latest archive in the Releases tab.
+Download the latest archive in [the Releases tab](https://github.com/juliangrtz/NINAHSaveEditor/releases).
 
 Alternatively:
 
