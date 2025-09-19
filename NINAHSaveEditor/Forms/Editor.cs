@@ -27,8 +27,7 @@ namespace NINAHSaveEditor {
 
             try {
                 ReadData(chosenFilePath);
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 MessageBox.Show("Something failed during the decryption:\n" + ex, "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -60,8 +59,7 @@ namespace NINAHSaveEditor {
         private void ApplyChangesBtn_Click(object sender, EventArgs e) {
             try {
                 WriteChanges();
-            }
-            catch (Exception ex) {
+            } catch (Exception ex) {
                 MessageBox.Show("Something failed during the encryption:\n" + ex, "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -97,7 +95,8 @@ namespace NINAHSaveEditor {
             storageObj["Photo"] = (int)photoCtrl.Value;
             storageObj["Cockroach"] = (int)cockroachesCtrl.Value;
 
-            save["_jsonValues"][Types.ConsumablesController] =JsonConvert.SerializeObject(controllerObj);
+            save["_jsonValues"][Types.ConsumablesController] = JsonConvert.SerializeObject(controllerObj);
+            save["_jsonValuesReserve"][Types.ConsumablesController] = JsonConvert.SerializeObject(controllerObj);
 
             var json = JsonConvert.SerializeObject(save);
             var encrypted = AES.Encrypt(json);
@@ -112,7 +111,7 @@ namespace NINAHSaveEditor {
         }
 
         private void ImportJSONToolStripMenuItem_Click(object sender, EventArgs e) {
-            var ofd = new OpenFileDialog{
+            var ofd = new OpenFileDialog {
                 Title = "Import edited JSON file into editor",
                 InitialDirectory = Utils.DetermineSaveFilePath(),
                 Filter = "JSON file (*.json)|*.json"
@@ -125,7 +124,7 @@ namespace NINAHSaveEditor {
         }
 
         private void ExportJSONToolStripMenuItem_Click(object sender, EventArgs e) {
-            var sfd = new SaveFileDialog{
+            var sfd = new SaveFileDialog {
                 Title = "Export current save file as JSON",
                 FileName = "GameSaveData.json",
                 InitialDirectory = Utils.DetermineSaveFilePath(),
