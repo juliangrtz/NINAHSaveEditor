@@ -114,7 +114,7 @@ namespace NINAHSaveEditor {
         private void ImportJSONToolStripMenuItem_Click(object sender, EventArgs e) {
             var ofd = new OpenFileDialog{
                 Title = "Import edited JSON file into editor",
-                InitialDirectory = "C:\\Program Files (x86)\\Steam\\userdata\\134778516\\3180070\\remote",
+                InitialDirectory = Utils.DetermineSaveFilePath(),
                 Filter = "JSON file (*.json)|*.json"
             };
 
@@ -128,7 +128,7 @@ namespace NINAHSaveEditor {
             var sfd = new SaveFileDialog{
                 Title = "Export current save file as JSON",
                 FileName = "GameSaveData.json",
-                InitialDirectory = "C:\\Program Files (x86)\\Steam\\userdata\\134778516\\3180070\\remote",
+                InitialDirectory = Utils.DetermineSaveFilePath(),
                 Filter = "JSON file (*.json)|*.json"
             };
 
