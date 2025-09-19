@@ -56,6 +56,21 @@
             this.exportJSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.stateCarpetCtrl = new System.Windows.Forms.CheckBox();
+            this.stateGroundCtrl = new System.Windows.Forms.CheckBox();
+            this.stateWindowCtrl = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.statePeepholeCtrl = new System.Windows.Forms.CheckBox();
+            this.stateHatchCtrl = new System.Windows.Forms.CheckBox();
+            this.stateAppleCtrl = new System.Windows.Forms.CheckBox();
+            this.stateClockCtrl = new System.Windows.Forms.CheckBox();
+            this.stateCultistSheetsCtrl = new System.Windows.Forms.CheckBox();
+            this.stateHusbandCtrl = new System.Windows.Forms.CheckBox();
+            this.stateTunnelBlockerCtrl = new System.Windows.Forms.CheckBox();
+            this.stateBlackHoleCtrl = new System.Windows.Forms.CheckBox();
+            this.stateHoleInteractCtrl = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.catFoodCtrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bobeerCtrl)).BeginInit();
             this.consumablesGroupBox.SuspendLayout();
@@ -69,14 +84,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.coffeeCtrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cigsCtrl)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // applyChangesBtn
             // 
             this.applyChangesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyChangesBtn.Location = new System.Drawing.Point(9, 283);
+            this.applyChangesBtn.Location = new System.Drawing.Point(12, 460);
             this.applyChangesBtn.Name = "applyChangesBtn";
-            this.applyChangesBtn.Size = new System.Drawing.Size(335, 43);
+            this.applyChangesBtn.Size = new System.Drawing.Size(332, 43);
             this.applyChangesBtn.TabIndex = 0;
             this.applyChangesBtn.Text = "Apply changes";
             this.applyChangesBtn.UseVisualStyleBackColor = true;
@@ -108,7 +124,7 @@
             // 
             this.jsonTreeView.Location = new System.Drawing.Point(350, 27);
             this.jsonTreeView.Name = "jsonTreeView";
-            this.jsonTreeView.Size = new System.Drawing.Size(524, 299);
+            this.jsonTreeView.Size = new System.Drawing.Size(524, 476);
             this.jsonTreeView.TabIndex = 3;
             // 
             // bobeerLbl
@@ -137,7 +153,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Location = new System.Drawing.Point(7, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 6;
@@ -420,11 +436,174 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.stateHoleInteractCtrl);
+            this.groupBox1.Controls.Add(this.stateBlackHoleCtrl);
+            this.groupBox1.Controls.Add(this.stateTunnelBlockerCtrl);
+            this.groupBox1.Controls.Add(this.stateHusbandCtrl);
+            this.groupBox1.Controls.Add(this.stateCultistSheetsCtrl);
+            this.groupBox1.Controls.Add(this.stateClockCtrl);
+            this.groupBox1.Controls.Add(this.stateAppleCtrl);
+            this.groupBox1.Controls.Add(this.stateHatchCtrl);
+            this.groupBox1.Controls.Add(this.statePeepholeCtrl);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.stateWindowCtrl);
+            this.groupBox1.Controls.Add(this.stateGroundCtrl);
+            this.groupBox1.Controls.Add(this.stateCarpetCtrl);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Location = new System.Drawing.Point(12, 283);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(332, 171);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "State";
+            // 
+            // stateCarpetCtrl
+            // 
+            this.stateCarpetCtrl.AutoSize = true;
+            this.stateCarpetCtrl.Location = new System.Drawing.Point(12, 50);
+            this.stateCarpetCtrl.Name = "stateCarpetCtrl";
+            this.stateCarpetCtrl.Size = new System.Drawing.Size(57, 17);
+            this.stateCarpetCtrl.TabIndex = 7;
+            this.stateCarpetCtrl.Text = "Carpet";
+            this.stateCarpetCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateGroundCtrl
+            // 
+            this.stateGroundCtrl.AutoSize = true;
+            this.stateGroundCtrl.Location = new System.Drawing.Point(12, 73);
+            this.stateGroundCtrl.Name = "stateGroundCtrl";
+            this.stateGroundCtrl.Size = new System.Drawing.Size(61, 17);
+            this.stateGroundCtrl.TabIndex = 8;
+            this.stateGroundCtrl.Text = "Ground";
+            this.stateGroundCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateWindowCtrl
+            // 
+            this.stateWindowCtrl.AutoSize = true;
+            this.stateWindowCtrl.Location = new System.Drawing.Point(12, 96);
+            this.stateWindowCtrl.Name = "stateWindowCtrl";
+            this.stateWindowCtrl.Size = new System.Drawing.Size(142, 17);
+            this.stateWindowCtrl.TabIndex = 9;
+            this.stateWindowCtrl.Text = "Window Boards Triggers";
+            this.stateWindowCtrl.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(65, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "(be careful, this may break the game!)";
+            // 
+            // statePeepholeCtrl
+            // 
+            this.statePeepholeCtrl.AutoSize = true;
+            this.statePeepholeCtrl.Location = new System.Drawing.Point(12, 119);
+            this.statePeepholeCtrl.Name = "statePeepholeCtrl";
+            this.statePeepholeCtrl.Size = new System.Drawing.Size(143, 17);
+            this.statePeepholeCtrl.TabIndex = 11;
+            this.statePeepholeCtrl.Text = "Peephole Ending Trigger";
+            this.statePeepholeCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateHatchCtrl
+            // 
+            this.stateHatchCtrl.AutoSize = true;
+            this.stateHatchCtrl.Location = new System.Drawing.Point(12, 142);
+            this.stateHatchCtrl.Name = "stateHatchCtrl";
+            this.stateHatchCtrl.Size = new System.Drawing.Size(83, 17);
+            this.stateHatchCtrl.TabIndex = 12;
+            this.stateHatchCtrl.Text = "Hatch Enter";
+            this.stateHatchCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateAppleCtrl
+            // 
+            this.stateAppleCtrl.AutoSize = true;
+            this.stateAppleCtrl.Location = new System.Drawing.Point(164, 50);
+            this.stateAppleCtrl.Name = "stateAppleCtrl";
+            this.stateAppleCtrl.Size = new System.Drawing.Size(53, 17);
+            this.stateAppleCtrl.TabIndex = 13;
+            this.stateAppleCtrl.Text = "Apple";
+            this.stateAppleCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateClockCtrl
+            // 
+            this.stateClockCtrl.AutoSize = true;
+            this.stateClockCtrl.Location = new System.Drawing.Point(164, 73);
+            this.stateClockCtrl.Name = "stateClockCtrl";
+            this.stateClockCtrl.Size = new System.Drawing.Size(53, 17);
+            this.stateClockCtrl.TabIndex = 14;
+            this.stateClockCtrl.Text = "Clock";
+            this.stateClockCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateCultistSheetsCtrl
+            // 
+            this.stateCultistSheetsCtrl.AutoSize = true;
+            this.stateCultistSheetsCtrl.Location = new System.Drawing.Point(164, 96);
+            this.stateCultistSheetsCtrl.Name = "stateCultistSheetsCtrl";
+            this.stateCultistSheetsCtrl.Size = new System.Drawing.Size(95, 17);
+            this.stateCultistSheetsCtrl.TabIndex = 15;
+            this.stateCultistSheetsCtrl.Text = "Cultists Sheets";
+            this.stateCultistSheetsCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateHusbandCtrl
+            // 
+            this.stateHusbandCtrl.AutoSize = true;
+            this.stateHusbandCtrl.Location = new System.Drawing.Point(164, 119);
+            this.stateHusbandCtrl.Name = "stateHusbandCtrl";
+            this.stateHusbandCtrl.Size = new System.Drawing.Size(69, 17);
+            this.stateHusbandCtrl.TabIndex = 16;
+            this.stateHusbandCtrl.Text = "Husband";
+            this.stateHusbandCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateTunnelBlockerCtrl
+            // 
+            this.stateTunnelBlockerCtrl.AutoSize = true;
+            this.stateTunnelBlockerCtrl.Location = new System.Drawing.Point(164, 142);
+            this.stateTunnelBlockerCtrl.Name = "stateTunnelBlockerCtrl";
+            this.stateTunnelBlockerCtrl.Size = new System.Drawing.Size(98, 17);
+            this.stateTunnelBlockerCtrl.TabIndex = 17;
+            this.stateTunnelBlockerCtrl.Text = "Tunnel Blocker";
+            this.stateTunnelBlockerCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateBlackHoleCtrl
+            // 
+            this.stateBlackHoleCtrl.AutoSize = true;
+            this.stateBlackHoleCtrl.Location = new System.Drawing.Point(236, 50);
+            this.stateBlackHoleCtrl.Name = "stateBlackHoleCtrl";
+            this.stateBlackHoleCtrl.Size = new System.Drawing.Size(78, 17);
+            this.stateBlackHoleCtrl.TabIndex = 18;
+            this.stateBlackHoleCtrl.Text = "Black Hole";
+            this.stateBlackHoleCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateHoleInteractCtrl
+            // 
+            this.stateHoleInteractCtrl.AutoSize = true;
+            this.stateHoleInteractCtrl.Location = new System.Drawing.Point(236, 73);
+            this.stateHoleInteractCtrl.Name = "stateHoleInteractCtrl";
+            this.stateHoleInteractCtrl.Size = new System.Drawing.Size(87, 17);
+            this.stateHoleInteractCtrl.TabIndex = 19;
+            this.stateHoleInteractCtrl.Text = "Hole Interact";
+            this.stateHoleInteractCtrl.UseVisualStyleBackColor = true;
+            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 333);
+            this.ClientSize = new System.Drawing.Size(877, 515);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.consumablesGroupBox);
             this.Controls.Add(this.jsonTreeView);
             this.Controls.Add(this.applyChangesBtn);
@@ -451,6 +630,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cigsCtrl)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,6 +671,21 @@
         private System.Windows.Forms.ToolStripMenuItem exportJSONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox stateCarpetCtrl;
+        private System.Windows.Forms.CheckBox statePeepholeCtrl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox stateWindowCtrl;
+        private System.Windows.Forms.CheckBox stateGroundCtrl;
+        private System.Windows.Forms.CheckBox stateHoleInteractCtrl;
+        private System.Windows.Forms.CheckBox stateBlackHoleCtrl;
+        private System.Windows.Forms.CheckBox stateTunnelBlockerCtrl;
+        private System.Windows.Forms.CheckBox stateHusbandCtrl;
+        private System.Windows.Forms.CheckBox stateCultistSheetsCtrl;
+        private System.Windows.Forms.CheckBox stateClockCtrl;
+        private System.Windows.Forms.CheckBox stateAppleCtrl;
+        private System.Windows.Forms.CheckBox stateHatchCtrl;
     }
 }
 

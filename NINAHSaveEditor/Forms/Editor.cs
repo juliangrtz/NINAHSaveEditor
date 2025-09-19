@@ -54,7 +54,25 @@ namespace NINAHSaveEditor {
             povistkaCtrl.Value = (int)consumables["Povistka"];
             kombuchaCtrl.Value = (int)consumables["Kombucha"];
             photoCtrl.Value = (int)consumables["Photo"];
+
+            // Object states
+            var objectStates = values[Types.StateObjectSavesData]["ObjectsStates"];
+            stateCarpetCtrl.Checked = Int2Bool((int)objectStates["Carpet"]);
+            stateGroundCtrl.Checked = Int2Bool((int)objectStates["Ground"]);
+            stateWindowCtrl.Checked = Int2Bool((int)objectStates["WindowBoardsTriggers"]);
+            statePeepholeCtrl.Checked = Int2Bool((int)objectStates["PeepholeEndingTrigger"]);
+            stateHatchCtrl.Checked = Int2Bool((int)objectStates["HatchEnter"]);
+            stateAppleCtrl.Checked = Int2Bool((int)objectStates["Apple"]);
+            stateClockCtrl.Checked = Int2Bool((int)objectStates["Clock"]);
+            stateCultistSheetsCtrl.Checked = Int2Bool((int)objectStates["CultistsSheets"]);
+            stateHusbandCtrl.Checked = Int2Bool((int)objectStates["Husband"]);
+            stateTunnelBlockerCtrl.Checked = Int2Bool((int)objectStates["TunnelBlocker"]);
+            stateBlackHoleCtrl.Checked = Int2Bool((int)objectStates["BlackHole"]);
+            stateHoleInteractCtrl.Checked = Int2Bool((int)objectStates["HoleInteract"]);
         }
+
+        private bool Int2Bool(int i) => i == 1;
+        private int Checkbox2Int(CheckBox cb) => cb.Checked ? 1 : 0;
 
         private void ApplyChangesBtn_Click(object sender, EventArgs e) {
             try {
@@ -97,6 +115,40 @@ namespace NINAHSaveEditor {
 
             save["_jsonValues"][Types.ConsumablesController] = JsonConvert.SerializeObject(controllerObj);
             save["_jsonValuesReserve"][Types.ConsumablesController] = JsonConvert.SerializeObject(controllerObj);
+
+            // Object states
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["Carpet"] = Checkbox2Int(stateCarpetCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["Ground"] = Checkbox2Int(stateGroundCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["WindowBoardsTriggers"] = Checkbox2Int(stateWindowCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["PeepholeEndingTrigger"] = Checkbox2Int(statePeepholeCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["HatchEnter"] = Checkbox2Int(stateHatchCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["Apple"] = stateAppleCtrl.Checked ? 1 : 0;
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["Clock"] = Checkbox2Int(stateClockCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["CultistsSheets"] = Checkbox2Int(stateCultistSheetsCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["Husband"] = Checkbox2Int(stateHusbandCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["TunnelBlocker"] = Checkbox2Int(stateTunnelBlockerCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["BlackHole"] = Checkbox2Int(stateBlackHoleCtrl);
+            save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["HoleInteract"] = Checkbox2Int(stateHoleInteractCtrl);
+
+            var stateControllerStr = (string)save["_jsonValues"][Types.StateObjectController];
+            var stateControllerObj = JsonConvert.DeserializeObject<JObject>(stateControllerStr);
+            var objectsStatesObj = (JObject)stateControllerObj["ObjectsStates"];
+
+            objectsStatesObj["Carpet"] = Checkbox2Int(stateCarpetCtrl);
+            objectsStatesObj["Ground"] = Checkbox2Int(stateGroundCtrl);
+            objectsStatesObj["WindowBoardsTriggers"] = Checkbox2Int(stateWindowCtrl);
+            objectsStatesObj["PeepholeEndingTrigger"] = Checkbox2Int(statePeepholeCtrl);
+            objectsStatesObj["HatchEnter"] = Checkbox2Int(stateHatchCtrl);
+            objectsStatesObj["Apple"] = Checkbox2Int(stateAppleCtrl);
+            objectsStatesObj["Clock"] = Checkbox2Int(stateClockCtrl);
+            objectsStatesObj["CultistsSheets"] = Checkbox2Int(stateCultistSheetsCtrl);
+            objectsStatesObj["Husband"] = Checkbox2Int(stateHusbandCtrl);
+            objectsStatesObj["TunnelBlocker"] = Checkbox2Int(stateTunnelBlockerCtrl);
+            objectsStatesObj["BlackHole"] = Checkbox2Int(stateBlackHoleCtrl);
+            objectsStatesObj["HoleInteract"] = Checkbox2Int(stateHoleInteractCtrl);
+
+            save["_jsonValues"][Types.StateObjectController] = JsonConvert.SerializeObject(stateControllerObj);
+            save["_jsonValuesReserve"][Types.StateObjectController] = JsonConvert.SerializeObject(stateControllerObj);
 
             var json = JsonConvert.SerializeObject(save);
             var encrypted = AES.Encrypt(json);
