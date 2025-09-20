@@ -57,20 +57,20 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.stateCarpetCtrl = new System.Windows.Forms.CheckBox();
-            this.stateGroundCtrl = new System.Windows.Forms.CheckBox();
-            this.stateWindowCtrl = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.statePeepholeCtrl = new System.Windows.Forms.CheckBox();
-            this.stateHatchCtrl = new System.Windows.Forms.CheckBox();
-            this.stateAppleCtrl = new System.Windows.Forms.CheckBox();
-            this.stateClockCtrl = new System.Windows.Forms.CheckBox();
-            this.stateCultistSheetsCtrl = new System.Windows.Forms.CheckBox();
-            this.stateHusbandCtrl = new System.Windows.Forms.CheckBox();
-            this.stateTunnelBlockerCtrl = new System.Windows.Forms.CheckBox();
-            this.stateBlackHoleCtrl = new System.Windows.Forms.CheckBox();
             this.stateHoleInteractCtrl = new System.Windows.Forms.CheckBox();
+            this.stateBlackHoleCtrl = new System.Windows.Forms.CheckBox();
+            this.stateTunnelBlockerCtrl = new System.Windows.Forms.CheckBox();
+            this.stateHusbandCtrl = new System.Windows.Forms.CheckBox();
+            this.stateCultistSheetsCtrl = new System.Windows.Forms.CheckBox();
+            this.stateClockCtrl = new System.Windows.Forms.CheckBox();
+            this.stateAppleCtrl = new System.Windows.Forms.CheckBox();
+            this.stateHatchCtrl = new System.Windows.Forms.CheckBox();
+            this.statePeepholeCtrl = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.stateWindowCtrl = new System.Windows.Forms.CheckBox();
+            this.stateGroundCtrl = new System.Windows.Forms.CheckBox();
+            this.stateCarpetCtrl = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.catFoodCtrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bobeerCtrl)).BeginInit();
             this.consumablesGroupBox.SuspendLayout();
@@ -411,21 +411,21 @@
             // importJSONToolStripMenuItem
             // 
             this.importJSONToolStripMenuItem.Name = "importJSONToolStripMenuItem";
-            this.importJSONToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.importJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importJSONToolStripMenuItem.Text = "Import JSON";
             this.importJSONToolStripMenuItem.Click += new System.EventHandler(this.ImportJSONToolStripMenuItem_Click);
             // 
             // exportJSONToolStripMenuItem
             // 
             this.exportJSONToolStripMenuItem.Name = "exportJSONToolStripMenuItem";
-            this.exportJSONToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exportJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportJSONToolStripMenuItem.Text = "Export JSON";
             this.exportJSONToolStripMenuItem.Click += new System.EventHandler(this.ExportJSONToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -458,125 +458,15 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
-            // label11
+            // stateHoleInteractCtrl
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 20);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "State";
-            // 
-            // stateCarpetCtrl
-            // 
-            this.stateCarpetCtrl.AutoSize = true;
-            this.stateCarpetCtrl.Location = new System.Drawing.Point(12, 50);
-            this.stateCarpetCtrl.Name = "stateCarpetCtrl";
-            this.stateCarpetCtrl.Size = new System.Drawing.Size(57, 17);
-            this.stateCarpetCtrl.TabIndex = 7;
-            this.stateCarpetCtrl.Text = "Carpet";
-            this.stateCarpetCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateGroundCtrl
-            // 
-            this.stateGroundCtrl.AutoSize = true;
-            this.stateGroundCtrl.Location = new System.Drawing.Point(12, 73);
-            this.stateGroundCtrl.Name = "stateGroundCtrl";
-            this.stateGroundCtrl.Size = new System.Drawing.Size(61, 17);
-            this.stateGroundCtrl.TabIndex = 8;
-            this.stateGroundCtrl.Text = "Ground";
-            this.stateGroundCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateWindowCtrl
-            // 
-            this.stateWindowCtrl.AutoSize = true;
-            this.stateWindowCtrl.Location = new System.Drawing.Point(12, 96);
-            this.stateWindowCtrl.Name = "stateWindowCtrl";
-            this.stateWindowCtrl.Size = new System.Drawing.Size(142, 17);
-            this.stateWindowCtrl.TabIndex = 9;
-            this.stateWindowCtrl.Text = "Window Boards Triggers";
-            this.stateWindowCtrl.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "(be careful, this may break the game!)";
-            // 
-            // statePeepholeCtrl
-            // 
-            this.statePeepholeCtrl.AutoSize = true;
-            this.statePeepholeCtrl.Location = new System.Drawing.Point(12, 119);
-            this.statePeepholeCtrl.Name = "statePeepholeCtrl";
-            this.statePeepholeCtrl.Size = new System.Drawing.Size(143, 17);
-            this.statePeepholeCtrl.TabIndex = 11;
-            this.statePeepholeCtrl.Text = "Peephole Ending Trigger";
-            this.statePeepholeCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateHatchCtrl
-            // 
-            this.stateHatchCtrl.AutoSize = true;
-            this.stateHatchCtrl.Location = new System.Drawing.Point(12, 142);
-            this.stateHatchCtrl.Name = "stateHatchCtrl";
-            this.stateHatchCtrl.Size = new System.Drawing.Size(83, 17);
-            this.stateHatchCtrl.TabIndex = 12;
-            this.stateHatchCtrl.Text = "Hatch Enter";
-            this.stateHatchCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateAppleCtrl
-            // 
-            this.stateAppleCtrl.AutoSize = true;
-            this.stateAppleCtrl.Location = new System.Drawing.Point(164, 50);
-            this.stateAppleCtrl.Name = "stateAppleCtrl";
-            this.stateAppleCtrl.Size = new System.Drawing.Size(53, 17);
-            this.stateAppleCtrl.TabIndex = 13;
-            this.stateAppleCtrl.Text = "Apple";
-            this.stateAppleCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateClockCtrl
-            // 
-            this.stateClockCtrl.AutoSize = true;
-            this.stateClockCtrl.Location = new System.Drawing.Point(164, 73);
-            this.stateClockCtrl.Name = "stateClockCtrl";
-            this.stateClockCtrl.Size = new System.Drawing.Size(53, 17);
-            this.stateClockCtrl.TabIndex = 14;
-            this.stateClockCtrl.Text = "Clock";
-            this.stateClockCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateCultistSheetsCtrl
-            // 
-            this.stateCultistSheetsCtrl.AutoSize = true;
-            this.stateCultistSheetsCtrl.Location = new System.Drawing.Point(164, 96);
-            this.stateCultistSheetsCtrl.Name = "stateCultistSheetsCtrl";
-            this.stateCultistSheetsCtrl.Size = new System.Drawing.Size(95, 17);
-            this.stateCultistSheetsCtrl.TabIndex = 15;
-            this.stateCultistSheetsCtrl.Text = "Cultists Sheets";
-            this.stateCultistSheetsCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateHusbandCtrl
-            // 
-            this.stateHusbandCtrl.AutoSize = true;
-            this.stateHusbandCtrl.Location = new System.Drawing.Point(164, 119);
-            this.stateHusbandCtrl.Name = "stateHusbandCtrl";
-            this.stateHusbandCtrl.Size = new System.Drawing.Size(69, 17);
-            this.stateHusbandCtrl.TabIndex = 16;
-            this.stateHusbandCtrl.Text = "Husband";
-            this.stateHusbandCtrl.UseVisualStyleBackColor = true;
-            // 
-            // stateTunnelBlockerCtrl
-            // 
-            this.stateTunnelBlockerCtrl.AutoSize = true;
-            this.stateTunnelBlockerCtrl.Location = new System.Drawing.Point(164, 142);
-            this.stateTunnelBlockerCtrl.Name = "stateTunnelBlockerCtrl";
-            this.stateTunnelBlockerCtrl.Size = new System.Drawing.Size(98, 17);
-            this.stateTunnelBlockerCtrl.TabIndex = 17;
-            this.stateTunnelBlockerCtrl.Text = "Tunnel Blocker";
-            this.stateTunnelBlockerCtrl.UseVisualStyleBackColor = true;
+            this.stateHoleInteractCtrl.AutoSize = true;
+            this.stateHoleInteractCtrl.Location = new System.Drawing.Point(236, 73);
+            this.stateHoleInteractCtrl.Name = "stateHoleInteractCtrl";
+            this.stateHoleInteractCtrl.Size = new System.Drawing.Size(87, 17);
+            this.stateHoleInteractCtrl.TabIndex = 19;
+            this.stateHoleInteractCtrl.Text = "Hole Interact";
+            this.stateHoleInteractCtrl.UseVisualStyleBackColor = true;
             // 
             // stateBlackHoleCtrl
             // 
@@ -588,15 +478,125 @@
             this.stateBlackHoleCtrl.Text = "Black Hole";
             this.stateBlackHoleCtrl.UseVisualStyleBackColor = true;
             // 
-            // stateHoleInteractCtrl
+            // stateTunnelBlockerCtrl
             // 
-            this.stateHoleInteractCtrl.AutoSize = true;
-            this.stateHoleInteractCtrl.Location = new System.Drawing.Point(236, 73);
-            this.stateHoleInteractCtrl.Name = "stateHoleInteractCtrl";
-            this.stateHoleInteractCtrl.Size = new System.Drawing.Size(87, 17);
-            this.stateHoleInteractCtrl.TabIndex = 19;
-            this.stateHoleInteractCtrl.Text = "Hole Interact";
-            this.stateHoleInteractCtrl.UseVisualStyleBackColor = true;
+            this.stateTunnelBlockerCtrl.AutoSize = true;
+            this.stateTunnelBlockerCtrl.Location = new System.Drawing.Point(164, 142);
+            this.stateTunnelBlockerCtrl.Name = "stateTunnelBlockerCtrl";
+            this.stateTunnelBlockerCtrl.Size = new System.Drawing.Size(98, 17);
+            this.stateTunnelBlockerCtrl.TabIndex = 17;
+            this.stateTunnelBlockerCtrl.Text = "Tunnel Blocker";
+            this.stateTunnelBlockerCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateHusbandCtrl
+            // 
+            this.stateHusbandCtrl.AutoSize = true;
+            this.stateHusbandCtrl.Location = new System.Drawing.Point(164, 119);
+            this.stateHusbandCtrl.Name = "stateHusbandCtrl";
+            this.stateHusbandCtrl.Size = new System.Drawing.Size(69, 17);
+            this.stateHusbandCtrl.TabIndex = 16;
+            this.stateHusbandCtrl.Text = "Husband";
+            this.stateHusbandCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateCultistSheetsCtrl
+            // 
+            this.stateCultistSheetsCtrl.AutoSize = true;
+            this.stateCultistSheetsCtrl.Location = new System.Drawing.Point(164, 96);
+            this.stateCultistSheetsCtrl.Name = "stateCultistSheetsCtrl";
+            this.stateCultistSheetsCtrl.Size = new System.Drawing.Size(95, 17);
+            this.stateCultistSheetsCtrl.TabIndex = 15;
+            this.stateCultistSheetsCtrl.Text = "Cultists Sheets";
+            this.stateCultistSheetsCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateClockCtrl
+            // 
+            this.stateClockCtrl.AutoSize = true;
+            this.stateClockCtrl.Location = new System.Drawing.Point(164, 73);
+            this.stateClockCtrl.Name = "stateClockCtrl";
+            this.stateClockCtrl.Size = new System.Drawing.Size(53, 17);
+            this.stateClockCtrl.TabIndex = 14;
+            this.stateClockCtrl.Text = "Clock";
+            this.stateClockCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateAppleCtrl
+            // 
+            this.stateAppleCtrl.AutoSize = true;
+            this.stateAppleCtrl.Location = new System.Drawing.Point(164, 50);
+            this.stateAppleCtrl.Name = "stateAppleCtrl";
+            this.stateAppleCtrl.Size = new System.Drawing.Size(53, 17);
+            this.stateAppleCtrl.TabIndex = 13;
+            this.stateAppleCtrl.Text = "Apple";
+            this.stateAppleCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateHatchCtrl
+            // 
+            this.stateHatchCtrl.AutoSize = true;
+            this.stateHatchCtrl.Location = new System.Drawing.Point(12, 142);
+            this.stateHatchCtrl.Name = "stateHatchCtrl";
+            this.stateHatchCtrl.Size = new System.Drawing.Size(83, 17);
+            this.stateHatchCtrl.TabIndex = 12;
+            this.stateHatchCtrl.Text = "Hatch Enter";
+            this.stateHatchCtrl.UseVisualStyleBackColor = true;
+            // 
+            // statePeepholeCtrl
+            // 
+            this.statePeepholeCtrl.AutoSize = true;
+            this.statePeepholeCtrl.Location = new System.Drawing.Point(12, 119);
+            this.statePeepholeCtrl.Name = "statePeepholeCtrl";
+            this.statePeepholeCtrl.Size = new System.Drawing.Size(143, 17);
+            this.statePeepholeCtrl.TabIndex = 11;
+            this.statePeepholeCtrl.Text = "Peephole Ending Trigger";
+            this.statePeepholeCtrl.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(65, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "(be careful, this may break the game!)";
+            // 
+            // stateWindowCtrl
+            // 
+            this.stateWindowCtrl.AutoSize = true;
+            this.stateWindowCtrl.Location = new System.Drawing.Point(12, 96);
+            this.stateWindowCtrl.Name = "stateWindowCtrl";
+            this.stateWindowCtrl.Size = new System.Drawing.Size(142, 17);
+            this.stateWindowCtrl.TabIndex = 9;
+            this.stateWindowCtrl.Text = "Window Boards Triggers";
+            this.stateWindowCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateGroundCtrl
+            // 
+            this.stateGroundCtrl.AutoSize = true;
+            this.stateGroundCtrl.Location = new System.Drawing.Point(12, 73);
+            this.stateGroundCtrl.Name = "stateGroundCtrl";
+            this.stateGroundCtrl.Size = new System.Drawing.Size(61, 17);
+            this.stateGroundCtrl.TabIndex = 8;
+            this.stateGroundCtrl.Text = "Ground";
+            this.stateGroundCtrl.UseVisualStyleBackColor = true;
+            // 
+            // stateCarpetCtrl
+            // 
+            this.stateCarpetCtrl.AutoSize = true;
+            this.stateCarpetCtrl.Location = new System.Drawing.Point(12, 50);
+            this.stateCarpetCtrl.Name = "stateCarpetCtrl";
+            this.stateCarpetCtrl.Size = new System.Drawing.Size(57, 17);
+            this.stateCarpetCtrl.TabIndex = 7;
+            this.stateCarpetCtrl.Text = "Carpet";
+            this.stateCarpetCtrl.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 20);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "State";
             // 
             // Editor
             // 
