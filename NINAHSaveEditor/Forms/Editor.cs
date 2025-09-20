@@ -114,7 +114,6 @@ namespace NINAHSaveEditor {
             storageObj["Cockroach"] = (int)cockroachesCtrl.Value;
 
             save["_jsonValues"][Types.ConsumablesController] = JsonConvert.SerializeObject(controllerObj);
-            save["_jsonValuesReserve"][Types.ConsumablesController] = JsonConvert.SerializeObject(controllerObj);
 
             // Object states
             save["Values"][Types.StateObjectSavesData]["ObjectsStates"]["Carpet"] = Checkbox2Int(stateCarpetCtrl);
@@ -148,7 +147,6 @@ namespace NINAHSaveEditor {
             objectsStatesObj["HoleInteract"] = Checkbox2Int(stateHoleInteractCtrl);
 
             save["_jsonValues"][Types.StateObjectController] = JsonConvert.SerializeObject(stateControllerObj);
-            save["_jsonValuesReserve"][Types.StateObjectController] = JsonConvert.SerializeObject(stateControllerObj);
 
             var json = JsonConvert.SerializeObject(save);
             var encrypted = AES.Encrypt(json);
