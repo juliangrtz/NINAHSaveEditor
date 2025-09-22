@@ -58,7 +58,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(385, 26);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Supported game version: v1.1.17";
+            this.label1.Text = "Supported game version: v1.1.18";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Start
