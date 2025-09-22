@@ -1,6 +1,7 @@
 # Yes, I'm a Save Editor
 
-<img width="873" height="539" alt="image" src="https://github.com/user-attachments/assets/38b408a2-08bd-4241-b755-3f7bfc8ce447" />
+<img width="648" height="537" alt="image" src="https://github.com/user-attachments/assets/b271a51a-929a-4747-b58f-5b96d3852868" />
+
 
 A Windows save game editor for **[No, I'm not a Human](https://store.steampowered.com/app/3180070/No_Im_not_a_Human/)**.  
 This tool allows you to **decrypt, inspect, edit, and re-encrypt** `.sav` files used by the game.  
