@@ -13,12 +13,18 @@ namespace NINAHSaveEditor {
             public int Inc() => _n++;
         }
 
+        private static string Cleanse(string s)
+            => s
+                .Replace(Types.Crap, "")
+                .Replace(", Assembly-CSharp", "")
+                .SubstringBefore("`2[[");
+
         private static void FillTreeView(TreeNode node, JToken tok, Stack<IndexContainer> s) {
             if (tok.Type == JTokenType.Object) {
                 TreeNode n = node;
                 if (tok.Parent != null) {
                     if (tok.Parent.Type == JTokenType.Property) {
-                        n = node.Nodes.Add($"{((JProperty)tok.Parent).Name} <{tok.Type}>");
+                        n = node.Nodes.Add($"{Cleanse(((JProperty)tok.Parent).Name)} <{tok.Type}>");
                     } else {
                         n = node.Nodes.Add($"[{s.Peek().Inc()}] <{tok.Type}>");
                     }
@@ -32,7 +38,7 @@ namespace NINAHSaveEditor {
                 TreeNode n = node;
                 if (tok.Parent != null) {
                     if (tok.Parent.Type == JTokenType.Property) {
-                        n = node.Nodes.Add($"{((JProperty)tok.Parent).Name} <{tok.Type}>");
+                        n = node.Nodes.Add($"{Cleanse(((JProperty)tok.Parent).Name)} <{tok.Type}>");
                     } else {
                         n = node.Nodes.Add($"[{s.Peek().Inc()}] <{tok.Type}>");
                     }
@@ -45,11 +51,10 @@ namespace NINAHSaveEditor {
             } else {
                 string name;
                 var value = JsonConvert.SerializeObject(((JValue)tok).Value);
-
-                if (tok.Parent.Type == JTokenType.Property) {
-                    name = $"{((JProperty)tok.Parent).Name} : {value}";
+                if (tok.Parent.Type == JTokenType.Property && ((JProperty)tok.Parent).Name != "$type") {
+                    name = $"{Cleanse(((JProperty)tok.Parent).Name)} : {Cleanse(value)}";
                 } else {
-                    name = $"[{s.Peek().Inc()}] : {value}";
+                    name = $"[{s.Peek().Inc()}] : {Cleanse(value)}";
                 }
 
                 node.Nodes.Add(name);
@@ -63,7 +68,7 @@ namespace NINAHSaveEditor {
 
                 var s = new Stack<IndexContainer>();
                 s.Push(new IndexContainer());
-                FillTreeView(tv.Nodes.Add("ROOT"), JsonConvert.DeserializeObject<JToken>(JsonConvert.SerializeObject(obj)), s);
+                FillTreeView(tv.Nodes.Add("Root "), JsonConvert.DeserializeObject<JToken>(JsonConvert.SerializeObject(obj)), s);
                 s.Pop();
             } finally {
                 tv.EndUpdate();

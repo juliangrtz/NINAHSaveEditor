@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NINAHSaveEditor {
-    public class Utils {
-        private const string AppID = "3180070";
+    public static class Utils {
+        public const string AppID = "3180070";
 
         public static string DetermineSaveFilePath() {
             var path = Registry.GetValue(
@@ -36,6 +36,18 @@ namespace NINAHSaveEditor {
                     return ninahDir + "\\remote";
                 }
             }
+        }
+
+        public static string SubstringBefore(this string text, string stopAt) {
+            if (!String.IsNullOrWhiteSpace(text)) {
+                int charLocation = text.IndexOf(stopAt, StringComparison.Ordinal);
+
+                if (charLocation > 0) {
+                    return text.Substring(0, charLocation);
+                }
+            }
+
+            return text;
         }
     }
 }

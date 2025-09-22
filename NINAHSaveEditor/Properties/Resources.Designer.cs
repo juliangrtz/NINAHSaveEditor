@@ -59,5 +59,15 @@ namespace NINAHSaveEditor.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FreshState {
+            get {
+                object obj = ResourceManager.GetObject("FreshState", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

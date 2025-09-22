@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NINAHSaveEditor.Crypto;
+using NINAHSaveEditor.Forms;
+using NINAHSaveEditor.Properties;
 
 namespace NINAHSaveEditor {
     public partial class Editor : Form {
@@ -35,11 +40,8 @@ namespace NINAHSaveEditor {
 
         private void ReadData(string path, bool decrypt = true) {
             var json = decrypt ? AES.Decrypt(File.ReadAllText(path)) : File.ReadAllText(path);
-
             save = JsonConvert.DeserializeObject<JObject>(json);
             var values = (JObject)save["Values"];
-            jsonTreeView.SetObjectAsJson(values);
-            jsonTreeView.ExpandAll();
 
             // Consumables
             var consumables = values[Types.ConsumablesSavesData]["Storage"];
@@ -69,6 +71,22 @@ namespace NINAHSaveEditor {
             stateTunnelBlockerCtrl.Checked = Int2Bool((int)objectStates["TunnelBlocker"]);
             stateBlackHoleCtrl.Checked = Int2Bool((int)objectStates["BlackHole"]);
             stateHoleInteractCtrl.Checked = Int2Bool((int)objectStates["HoleInteract"]);
+
+            // Day/Night
+            var day = !Int2Bool((int)values[Types.DayNightSavesData]["TimeOfDay"]);
+            if (day) {
+                dayCtrl.Checked = true;
+                nightCtrl.Checked = false;
+            }
+            else {
+                dayCtrl.Checked = false;
+                nightCtrl.Checked = true;
+            }
+
+            dayNrCtrl.Value = (int)values[Types.DayNightSavesData]["Day"];
+            lastOrderCtrl.Value = (int)values[Types.DayNightSavesData]["LastCourierOrderedDay"];
+            extraEnergyCtrl.Value = (int)values[Types.DayNightSavesData]["ExtraEnergySlots"];
+            accTimeCtrl.Value = (decimal)values[Types.DayNightSavesData]["AccumulatedTime"];
         }
 
         private bool Int2Bool(int i) => i == 1;
@@ -148,6 +166,21 @@ namespace NINAHSaveEditor {
 
             save["_jsonValues"][Types.StateObjectController] = JsonConvert.SerializeObject(stateControllerObj);
 
+            // Day/Night
+            save["Values"][Types.DayNightSavesData]["TimeOfDay"] = dayCtrl.Checked ? 0 : 1;
+            save["Values"][Types.DayNightSavesData]["Day"] = (int)dayNrCtrl.Value;
+            save["Values"][Types.DayNightSavesData]["LastCourierOrderedDay"] = (int)lastOrderCtrl.Value;
+            // TODO
+            //save["Values"][Types.DayNightSavesData]["AccumulatedTime"] = accTimeCtrl.Value;
+
+            var dayNightControllerStr = (string)save["_jsonValues"][Types.DayNightController];
+            var dayNightControllerObj = JsonConvert.DeserializeObject<JObject>(dayNightControllerStr);
+            dayNightControllerObj["TimeOfDay"] = dayCtrl.Checked ? 0 : 1;
+            dayNightControllerObj["Day"] = (int)dayNrCtrl.Value;
+            dayNightControllerObj["LastCourierOrderedDay"] = (int)lastOrderCtrl.Value;
+
+            save["_jsonValues"][Types.DayNightController] = JsonConvert.SerializeObject(dayNightControllerObj);
+
             var json = JsonConvert.SerializeObject(save);
             var encrypted = AES.Encrypt(json);
             File.WriteAllText(chosenFilePath, encrypted);
@@ -198,6 +231,34 @@ namespace NINAHSaveEditor {
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information
             );
+        }
+
+        private void ResetToFreshSaveBtn_Click(object sender, EventArgs e) {
+            try {
+                var freshState = Encoding.UTF8.GetString(Resources.FreshState);
+                var encrypted = AES.Encrypt(freshState);
+                File.WriteAllText(chosenFilePath, encrypted);
+                MessageBox.Show("Saved.");
+                ReadData(chosenFilePath);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Something failed while writing the fresh state:\n" + ex, "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void ShowObjectTreeBtn_Click(object sender, EventArgs e) {
+            new ObjectTreeView(save).Show();
+        }
+
+        private void RestartGameBtn_Click(object sender, EventArgs e) {
+            foreach (var p in Process.GetProcessesByName("NoImNotAHuman")) {
+                p.Kill();
+            }
+
+            Thread.Sleep(2000);
+
+            Process.Start($"steam://run/{Utils.AppID}");
         }
     }
 }

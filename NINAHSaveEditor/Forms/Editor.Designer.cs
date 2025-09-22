@@ -27,7 +27,6 @@
             this.applyChangesBtn = new System.Windows.Forms.Button();
             this.catFoodCtrl = new System.Windows.Forms.NumericUpDown();
             this.catFoodLbl = new System.Windows.Forms.Label();
-            this.jsonTreeView = new System.Windows.Forms.TreeView();
             this.bobeerLbl = new System.Windows.Forms.Label();
             this.bobeerCtrl = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,6 +70,23 @@
             this.stateGroundCtrl = new System.Windows.Forms.CheckBox();
             this.stateCarpetCtrl = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lastOrderCtrl = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nightCtrl = new System.Windows.Forms.RadioButton();
+            this.dayCtrl = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dayNrCtrl = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.restartGameBtn = new System.Windows.Forms.Button();
+            this.showObjectTreeBtn = new System.Windows.Forms.Button();
+            this.resetToFreshSaveBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.extraEnergyCtrl = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.accTimeCtrl = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.catFoodCtrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bobeerCtrl)).BeginInit();
             this.consumablesGroupBox.SuspendLayout();
@@ -85,14 +101,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.cigsCtrl)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lastOrderCtrl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dayNrCtrl)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.extraEnergyCtrl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accTimeCtrl)).BeginInit();
             this.SuspendLayout();
             // 
             // applyChangesBtn
             // 
             this.applyChangesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.applyChangesBtn.Location = new System.Drawing.Point(12, 460);
+            this.applyChangesBtn.Image = ((System.Drawing.Image)(resources.GetObject("applyChangesBtn.Image")));
+            this.applyChangesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.applyChangesBtn.Location = new System.Drawing.Point(40, 460);
             this.applyChangesBtn.Name = "applyChangesBtn";
-            this.applyChangesBtn.Size = new System.Drawing.Size(332, 43);
+            this.applyChangesBtn.Size = new System.Drawing.Size(266, 43);
             this.applyChangesBtn.TabIndex = 0;
             this.applyChangesBtn.Text = "Apply changes";
             this.applyChangesBtn.UseVisualStyleBackColor = true;
@@ -119,13 +143,6 @@
             this.catFoodLbl.Size = new System.Drawing.Size(57, 16);
             this.catFoodLbl.TabIndex = 2;
             this.catFoodLbl.Text = "Cat food";
-            // 
-            // jsonTreeView
-            // 
-            this.jsonTreeView.Location = new System.Drawing.Point(350, 27);
-            this.jsonTreeView.Name = "jsonTreeView";
-            this.jsonTreeView.Size = new System.Drawing.Size(524, 476);
-            this.jsonTreeView.TabIndex = 3;
             // 
             // bobeerLbl
             // 
@@ -395,7 +412,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(877, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(654, 24);
             this.menuStrip1.TabIndex = 8;
             // 
             // fileToolStripMenuItem
@@ -411,21 +428,21 @@
             // importJSONToolStripMenuItem
             // 
             this.importJSONToolStripMenuItem.Name = "importJSONToolStripMenuItem";
-            this.importJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importJSONToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.importJSONToolStripMenuItem.Text = "Import JSON";
             this.importJSONToolStripMenuItem.Click += new System.EventHandler(this.ImportJSONToolStripMenuItem_Click);
             // 
             // exportJSONToolStripMenuItem
             // 
             this.exportJSONToolStripMenuItem.Name = "exportJSONToolStripMenuItem";
-            this.exportJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportJSONToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.exportJSONToolStripMenuItem.Text = "Export JSON";
             this.exportJSONToolStripMenuItem.Click += new System.EventHandler(this.ExportJSONToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -552,7 +569,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 15);
+            this.label1.Location = new System.Drawing.Point(65, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 16);
             this.label1.TabIndex = 10;
@@ -598,14 +615,212 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "State";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.accTimeCtrl);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.extraEnergyCtrl);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.lastOrderCtrl);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.nightCtrl);
+            this.groupBox2.Controls.Add(this.dayCtrl);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.dayNrCtrl);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Location = new System.Drawing.Point(363, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(285, 250);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            // 
+            // lastOrderCtrl
+            // 
+            this.lastOrderCtrl.Location = new System.Drawing.Point(222, 115);
+            this.lastOrderCtrl.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.lastOrderCtrl.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.lastOrderCtrl.Name = "lastOrderCtrl";
+            this.lastOrderCtrl.Size = new System.Drawing.Size(50, 20);
+            this.lastOrderCtrl.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Last courier ordered day";
+            // 
+            // nightCtrl
+            // 
+            this.nightCtrl.AutoSize = true;
+            this.nightCtrl.Location = new System.Drawing.Point(171, 44);
+            this.nightCtrl.Name = "nightCtrl";
+            this.nightCtrl.Size = new System.Drawing.Size(50, 17);
+            this.nightCtrl.TabIndex = 8;
+            this.nightCtrl.TabStop = true;
+            this.nightCtrl.Text = "Night";
+            this.nightCtrl.UseVisualStyleBackColor = true;
+            // 
+            // dayCtrl
+            // 
+            this.dayCtrl.AutoSize = true;
+            this.dayCtrl.Location = new System.Drawing.Point(86, 44);
+            this.dayCtrl.Name = "dayCtrl";
+            this.dayCtrl.Size = new System.Drawing.Size(44, 17);
+            this.dayCtrl.TabIndex = 7;
+            this.dayCtrl.TabStop = true;
+            this.dayCtrl.Text = "Day";
+            this.dayCtrl.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(6, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(87, 20);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Day/Night";
+            // 
+            // dayNrCtrl
+            // 
+            this.dayNrCtrl.Location = new System.Drawing.Point(222, 76);
+            this.dayNrCtrl.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.dayNrCtrl.Name = "dayNrCtrl";
+            this.dayNrCtrl.Size = new System.Drawing.Size(50, 20);
+            this.dayNrCtrl.TabIndex = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(18, 79);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 16);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Day";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.restartGameBtn);
+            this.groupBox3.Controls.Add(this.showObjectTreeBtn);
+            this.groupBox3.Controls.Add(this.resetToFreshSaveBtn);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Location = new System.Drawing.Point(365, 283);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(283, 220);
+            this.groupBox3.TabIndex = 28;
+            this.groupBox3.TabStop = false;
+            // 
+            // restartGameBtn
+            // 
+            this.restartGameBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartGameBtn.Location = new System.Drawing.Point(20, 166);
+            this.restartGameBtn.Name = "restartGameBtn";
+            this.restartGameBtn.Size = new System.Drawing.Size(250, 43);
+            this.restartGameBtn.TabIndex = 31;
+            this.restartGameBtn.Text = "(Re)start game";
+            this.restartGameBtn.UseVisualStyleBackColor = true;
+            this.restartGameBtn.Click += new System.EventHandler(this.RestartGameBtn_Click);
+            // 
+            // showObjectTreeBtn
+            // 
+            this.showObjectTreeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showObjectTreeBtn.Location = new System.Drawing.Point(20, 53);
+            this.showObjectTreeBtn.Name = "showObjectTreeBtn";
+            this.showObjectTreeBtn.Size = new System.Drawing.Size(250, 43);
+            this.showObjectTreeBtn.TabIndex = 30;
+            this.showObjectTreeBtn.Text = "Show object tree";
+            this.showObjectTreeBtn.UseVisualStyleBackColor = true;
+            this.showObjectTreeBtn.Click += new System.EventHandler(this.ShowObjectTreeBtn_Click);
+            // 
+            // resetToFreshSaveBtn
+            // 
+            this.resetToFreshSaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetToFreshSaveBtn.Location = new System.Drawing.Point(19, 107);
+            this.resetToFreshSaveBtn.Name = "resetToFreshSaveBtn";
+            this.resetToFreshSaveBtn.Size = new System.Drawing.Size(250, 43);
+            this.resetToFreshSaveBtn.TabIndex = 29;
+            this.resetToFreshSaveBtn.Text = "Reset to fresh save";
+            this.resetToFreshSaveBtn.UseVisualStyleBackColor = true;
+            this.resetToFreshSaveBtn.Click += new System.EventHandler(this.ResetToFreshSaveBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(8, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Miscellaneous";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Extra energy slots";
+            // 
+            // extraEnergyCtrl
+            // 
+            this.extraEnergyCtrl.Location = new System.Drawing.Point(222, 155);
+            this.extraEnergyCtrl.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.extraEnergyCtrl.Name = "extraEnergyCtrl";
+            this.extraEnergyCtrl.Size = new System.Drawing.Size(50, 20);
+            this.extraEnergyCtrl.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 196);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Accumulated time";
+            // 
+            // accTimeCtrl
+            // 
+            this.accTimeCtrl.DecimalPlaces = 1;
+            this.accTimeCtrl.Enabled = false;
+            this.accTimeCtrl.Location = new System.Drawing.Point(222, 196);
+            this.accTimeCtrl.Name = "accTimeCtrl";
+            this.accTimeCtrl.ReadOnly = true;
+            this.accTimeCtrl.Size = new System.Drawing.Size(50, 20);
+            this.accTimeCtrl.TabIndex = 14;
+            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 515);
+            this.ClientSize = new System.Drawing.Size(654, 515);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.consumablesGroupBox);
-            this.Controls.Add(this.jsonTreeView);
             this.Controls.Add(this.applyChangesBtn);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -632,6 +847,14 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lastOrderCtrl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dayNrCtrl)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.extraEnergyCtrl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accTimeCtrl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,7 +865,6 @@
         private System.Windows.Forms.Button applyChangesBtn;
         private System.Windows.Forms.NumericUpDown catFoodCtrl;
         private System.Windows.Forms.Label catFoodLbl;
-        private System.Windows.Forms.TreeView jsonTreeView;
         private System.Windows.Forms.Label bobeerLbl;
         private System.Windows.Forms.NumericUpDown bobeerCtrl;
         private System.Windows.Forms.Label label2;
@@ -686,6 +908,23 @@
         private System.Windows.Forms.CheckBox stateClockCtrl;
         private System.Windows.Forms.CheckBox stateAppleCtrl;
         private System.Windows.Forms.CheckBox stateHatchCtrl;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown dayNrCtrl;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button showObjectTreeBtn;
+        private System.Windows.Forms.Button resetToFreshSaveBtn;
+        private System.Windows.Forms.RadioButton nightCtrl;
+        private System.Windows.Forms.RadioButton dayCtrl;
+        private System.Windows.Forms.NumericUpDown lastOrderCtrl;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button restartGameBtn;
+        private System.Windows.Forms.NumericUpDown extraEnergyCtrl;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown accTimeCtrl;
     }
 }
 
